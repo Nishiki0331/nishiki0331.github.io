@@ -18,14 +18,12 @@
     .visible-links a { color: var(--zelda-gold) !important; font-family: var(--font-serif); font-weight: 700 !important; font-size: 1rem !important; letter-spacing: 0.15em !important; text-decoration: none; transition: all 0.3s ease; }
     .visible-links a:hover { color: var(--zelda-gold-bright) !important; text-shadow: 0 0 10px rgba(197, 179, 130, 0.5); }
 
-    /* 写真の背景帯（薄いゴールド）と枠の調整 */
-    .hero-wrapper { margin-top: 60px; width: 100%; padding: 25px 0; /* 上下の余白を詰めてスッキリさせました */ background-color: rgba(197, 179, 130, 0.08); display: flex; justify-content: center; border-bottom: 1px solid rgba(197,179,130,0.2); }
-    /* 高さを固定せず、中身の画像に合わせる */
-    .hero-container { position: relative; width: 95%; max-width: 850px; overflow: hidden; border: 1px solid var(--zelda-gold); border-radius: 4px; background-color: #000; box-shadow: 0 8px 25px rgba(0,0,0,0.7); display: flex; /* 画像の下の謎の隙間を消すため */ }
-    /* 画像を直接配置し、縦幅を自動調整 */
+    /* 背景の帯と写真サイズ（小さめキープ） */
+    .hero-wrapper { margin-top: 60px; width: 100%; padding: 15px 0; background-color: rgba(197, 179, 130, 0.08); display: flex; justify-content: center; border-bottom: 1px solid rgba(197,179,130,0.2); }
+    .hero-container { position: relative; width: 90%; max-width: 600px; overflow: hidden; border: 1px solid var(--zelda-gold); border-radius: 4px; background-color: #000; box-shadow: 0 6px 20px rgba(0,0,0,0.7); display: flex; }
     .hero-image { width: 100%; height: auto; display: block; object-fit: cover; }
     
-    .hero-caption-right { position: absolute; bottom: 10px; right: 15px; font-size: 0.75rem; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7); z-index: 2; }
+    .hero-caption-right { position: absolute; bottom: 8px; right: 12px; font-size: 0.7rem; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7); z-index: 2; }
     .hero-caption-right a { color: var(--zelda-gold-bright); text-decoration: underline; }
 
     .zelda-line { display: flex; align-items: center; justify-content: center; margin: 50px 0 30px 0; width: 100%; }
@@ -95,7 +93,7 @@
 
   <div class="hero-wrapper" id="home">
     <div class="hero-container">
-      <img src="index_files/スクリーンショット 2026-05-26 214553.png" alt="広島大学" class="hero-image">
+      <img src="スクリーンショット 2026-05-26 214553.png" alt="広島大学" class="hero-image">
       <div class="hero-caption-right">※この画像は<a href="https://www.hiroshima-u.ac.jp/" target="_blank">広島大学のホームページ</a>からお借りしています。</div>
     </div>
   </div>
@@ -124,11 +122,11 @@
         <div class="card-grid">
           <div class="zelda-card">
             <h4>ゲーム制作同好会</h4>
-            <div class="img-wrapper"><img src="index_files/20260525_040811059_iOS.jpg" alt="ゲーム制作"></div>
+            <div class="img-wrapper"><img src="20260525_040811059_iOS.jpg" alt="ゲーム制作"></div>
           </div>
           <div class="zelda-card">
             <h4>アクリル水彩画サークル</h4>
-            <div class="img-wrapper"><img src="index_files/20260525_040755522_iOS.jpg" alt="アクリル水彩画"></div>
+            <div class="img-wrapper"><img src="20260525_040755522_iOS.jpg" alt="アクリル水彩画"></div>
           </div>
         </div>
 
@@ -137,17 +135,17 @@
         <div class="card-grid">
           <a href="https://www.nintendo.co.jp/zelda/botw/" target="_blank" rel="noopener noreferrer" class="zelda-card botw-card">
             <h4>ゼルダの伝説<br>ブレス オブ ザ ワイルド</h4>
-            <div class="img-wrapper"><img src="index_files/20260525_040636246_iOS.jpg" alt="ゼルダの伝説"></div>
+            <div class="img-wrapper"><img src="20260525_040636246_iOS.jpg" alt="ゼルダの伝説"></div>
             <div class="copyright">© Nintendo</div>
           </a>
           <a href="https://genshin.hoyoverse.com/ja" target="_blank" rel="noopener noreferrer" class="zelda-card">
             <h4>原神</h4>
-            <div class="img-wrapper"><img src="index_files/20260525_040649320_iOS.jpg" alt="原神"></div>
+            <div class="img-wrapper"><img src="20260525_040649320_iOS.jpg" alt="原神"></div>
             <div class="copyright">© COGNOSPHERE</div>
           </a>
           <a href="https://undertale.jp/" target="_blank" rel="noopener noreferrer" class="zelda-card">
             <h4>UNDERTALE</h4>
-            <div class="img-wrapper"><img src="index_files/20260525_040700933_iOS.jpg" alt="UNDERTALE" style="object-fit: cover;"></div>
+            <div class="img-wrapper"><img src="20260525_040700933_iOS.jpg" alt="UNDERTALE" style="object-fit: cover;"></div>
             <div class="copyright">© Toby Fox / Fangamer</div>
           </a>
         </div>
@@ -172,8 +170,8 @@
         <p>絵描きでは人物を描く練習をしています。手や足の細部の練習や全体像の練習、男女の描き分けなどを練習しています。ドローイングという方法を用いて練習しています。</p>
         <div class="slider-container">
           <div class="slider-track" id="slider-draw">
-            <img src="index_files/20260526_121024000_iOS 1.png" alt="絵1">
-            <img src="index_files/20260526_121024000_iOS.png" alt="絵2">
+            <img src="20260526_121024000_iOS 1.png" alt="絵1">
+            <img src="20260526_121024000_iOS.png" alt="絵2">
           </div>
         </div>
       </section>
@@ -185,9 +183,9 @@
         <p>ゲーム制作同好会で開発しているオリジナルゲームの開発中スクリーンショットです。</p>
         <div class="slider-container" style="border-color: var(--sheikah-blue); box-shadow: 0 0 15px rgba(66, 245, 245, 0.2);">
           <div class="slider-track" id="slider-org-game">
-            <img src="index_files/20260526_113656000_iOS.png" alt="オリジナルゲーム画面1">
-            <img src="index_files/20260526_114443000_iOS.png" alt="オリジナルゲーム画面2">
-            <img src="index_files/20260526_114516000_iOS.png" alt="オリジナルゲーム画面3">
+            <img src="20260526_113656000_iOS.png" alt="オリジナルゲーム画面1">
+            <img src="20260526_114443000_iOS.png" alt="オリジナルゲーム画面2">
+            <img src="20260526_114516000_iOS.png" alt="オリジナルゲーム画面3">
           </div>
         </div>
       </section>
