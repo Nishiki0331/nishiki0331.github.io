@@ -1,323 +1,203 @@
 <!DOCTYPE html>
-<!-- saved from url=(0026)https://www.wujingchi.com/ -->
-<html lang="en" class=" js "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-
-<!-- begin SEO -->
-
-
-
-
-
-<title>西山　雄貴 - Homepage</title>
-
-
-
-
-
-
-
-<meta property="og:locale" content="en">
-<meta property="og:site_name" content="西山　雄貴">
-<meta property="og:title" content="西山　雄貴">
-
-
-  <link rel="canonical" href="http://localhost:4000/">
-  <meta property="og:url" content="http://localhost:4000/">
-
-
-
-  <meta property="og:description" content="2008年広島生まれ">
-
-
-
-
-<!-- end SEO -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>西山 雄貴 - Homepage</title>
-  <meta name="description" content="広島大学 情報科学部の学生です">
-
-  <!-- メインCSS -->
-  <link rel="stylesheet" href="./index_files/main.css">
-
-  <!-- ファビコン -->
-  <link rel="icon" href="favicon.ico">
-
-  <!-- スムーススクロール -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700;800&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-      .page {
-      position: relative; /* 背景の基準点にする */
-      z-index: 1;
-    }
+    :root { --zelda-black: #050505; --zelda-dark: #111111; --zelda-gold: #c5b382; --zelda-gold-bright: #e8d9a1; --sheikah-blue: #42f5f5; --text-main: #d0d0d0; --font-serif: 'Shippori Mincho', serif; --font-sans: 'Noto Sans JP', sans-serif; }
+    html { scroll-behavior: smooth !important; }
+    body { background-color: var(--zelda-black); font-family: var(--font-sans); color: var(--text-main); margin: 0 !important; padding: 0 !important; line-height: 1.8; background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, transparent 70%); }
+    
+    .masthead { position: fixed; top: 0; left: 0; z-index: 1000; width: 100% !important; height: 60px !important; background-color: rgba(5, 5, 5, 0.95) !important; border-bottom: 1px solid var(--zelda-gold) !important; display: flex !important; align-items: center !important; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.8); }
+    .visible-links { display: flex !important; gap: 35px !important; list-style: none; margin: 0; padding: 0; }
+    .visible-links a { color: var(--zelda-gold) !important; font-family: var(--font-serif); font-weight: 700 !important; font-size: 1rem !important; letter-spacing: 0.15em !important; text-decoration: none; transition: all 0.3s ease; }
+    .visible-links a:hover { color: var(--zelda-gold-bright) !important; text-shadow: 0 0 10px rgba(197, 179, 130, 0.5); }
 
-    .page::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      
-      /* 💡 表示させたい画像ファイル名に書き換えてください */
-      background-image: url('bobcablePB0800210272_TP_V.jpg'); 
-      background-size: cover;
-      background-position: center;
-      
-      /* 💡 0.15 は 15% の濃さという意味（好みの薄さに調整してね） */
-      opacity: 0.15; 
-      
-      /* 文字の後ろに配置する */
-      z-index: -1; 
-    }
+    /* 写真の背景帯（薄いゴールド）と枠の調整 */
+    .hero-wrapper { margin-top: 60px; width: 100%; padding: 25px 0; /* 上下の余白を詰めてスッキリさせました */ background-color: rgba(197, 179, 130, 0.08); display: flex; justify-content: center; border-bottom: 1px solid rgba(197,179,130,0.2); }
+    /* 高さを固定せず、中身の画像に合わせる */
+    .hero-container { position: relative; width: 95%; max-width: 850px; overflow: hidden; border: 1px solid var(--zelda-gold); border-radius: 4px; background-color: #000; box-shadow: 0 8px 25px rgba(0,0,0,0.7); display: flex; /* 画像の下の謎の隙間を消すため */ }
+    /* 画像を直接配置し、縦幅を自動調整 */
+    .hero-image { width: 100%; height: auto; display: block; object-fit: cover; }
+    
+    .hero-caption-right { position: absolute; bottom: 10px; right: 15px; font-size: 0.75rem; color: #fff; text-shadow: 1px 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7); z-index: 2; }
+    .hero-caption-right a { color: var(--zelda-gold-bright); text-decoration: underline; }
+
+    .zelda-line { display: flex; align-items: center; justify-content: center; margin: 50px 0 30px 0; width: 100%; }
+    .zelda-line::before, .zelda-line::after { content: ''; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--zelda-gold), transparent); }
+    .zelda-line .diamond { width: 6px; height: 6px; background-color: var(--zelda-gold); transform: rotate(45deg); margin: 0 15px; }
+
+    /* メインレイアウト */
+    #main { display: flex !important; max-width: 1100px; margin: 40px auto 100px auto; gap: 50px; align-items: flex-start; padding: 0 20px; }
+    section { scroll-margin-top: 110px; }
+
+    .sidebar__main { width: 300px !important; flex-shrink: 0; background-color: var(--zelda-dark) !important; border: 1px solid rgba(197, 179, 130, 0.3); padding: 40px 30px !important; box-sizing: border-box !important; text-align: left; position: sticky; top: 90px; margin-top: 0; }
+    .author__name { font-family: var(--font-serif); font-size: 1.8rem !important; color: var(--zelda-gold) !important; margin: 0 0 5px 0 !important; }
+    .author__name-en { font-size: 0.9rem; color: var(--zelda-gold-bright); opacity: 0.7; margin-bottom: 20px; letter-spacing: 0.2em; }
+    .author__bio { margin: 0 0 30px 0; line-height: 1.8; }
+    .author__urls { list-style: none; padding: 0; text-align: left; }
+    .author__urls li { margin-bottom: 15px !important; font-size: 0.95rem; color: #aaa; }
+    .author__urls i { color: var(--zelda-gold); width: 20px; }
+
+    .page { flex: 1; box-sizing: border-box !important; }
+    
+    h2 { font-family: var(--font-serif); font-size: 2.2rem !important; color: var(--zelda-gold) !important; margin: 0 0 20px 0 !important; text-align: center; letter-spacing: 0.15em; line-height: 1.2; }
+    p { margin-bottom: 30px !important; color: var(--text-main); line-height: 1.8; }
+
+    .section-subheading { font-family: var(--font-serif); font-size: 1.4rem; color: var(--zelda-gold-bright); margin: 50px 0 20px 0; text-align: center; display: flex; align-items: center; justify-content: center; gap: 15px; }
+    .section-subheading::before, .section-subheading::after { content: ''; height: 1px; width: 40px; background-color: var(--zelda-gold); opacity: 0.5; }
+
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 20px; }
+    .zelda-card { border: 1px solid rgba(197, 179, 130, 0.4); background: linear-gradient(135deg, #111 0%, #050505 100%); padding: 15px; text-align: center; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit; }
+    .zelda-card:hover { border-color: var(--zelda-gold); box-shadow: 0 0 15px rgba(197, 179, 130, 0.3); transform: translateY(-3px); }
+    .zelda-card h4 { color: var(--zelda-gold); font-size: 1.05rem; margin: 0 0 12px 0; width: 100%; border-bottom: 1px dashed rgba(197, 179, 130, 0.3); padding-bottom: 8px; }
+    .zelda-card.botw-card h4 { font-size: 0.9rem; line-height: 1.4; }
+    .zelda-card .img-wrapper { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(197, 179, 130, 0.2); background-color: #000; }
+    .zelda-card img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); }
+    .zelda-card:hover img { transform: scale(1.08); }
+    .copyright { font-size: 0.65rem; color: #666; margin-top: 10px; line-height: 1.4; text-align: center; }
+    .disclaimer-text { font-size: 0.8rem; color: #888; text-align: center; margin-bottom: 40px; }
+
+    .slider-container { width: 100%; max-width: 400px; margin: 0 auto 40px auto; overflow: hidden; border: 1px solid rgba(197, 179, 130, 0.4); border-radius: 4px; aspect-ratio: 16 / 9; background-color: #000; }
+    .slider-track { display: flex; width: 100%; height: 100%; transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+    .slider-track img { width: 100%; height: 100%; object-fit: contain; flex-shrink: 0; }
+
+    .timeline { position: relative !important; max-width: 500px; margin: 0 auto 50px auto !important; }
+    .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; width: 1px; height: calc(100% - 30px); background-color: var(--zelda-gold); opacity: 0.5; }
+    .item { display: flex; margin-bottom: 30px; position: relative; }
+    .circle { width: 15px; height: 15px; border: 1px solid var(--zelda-gold); background-color: var(--zelda-black); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0; z-index: 2; transition: all 0.3s; }
+    .item:hover .circle { background-color: var(--zelda-gold); box-shadow: 0 0 10px var(--zelda-gold); }
+    .item:last-child .circle { border-color: var(--sheikah-blue); background-color: var(--sheikah-blue); box-shadow: 0 0 15px rgba(66, 245, 245, 0.6); }
+    .text { margin-left: 25px; font-family: var(--font-serif); font-size: 1.1rem; color: #ccc; }
+    .item:last-child .text { color: var(--sheikah-blue); }
+
+    .ai-credit { text-align: right; padding: 20px 40px; font-size: 0.9rem; color: var(--text-main); margin-top: 30px; }
+
+    @media (max-width: 800px) { #main { flex-direction: column; } .sidebar__main { width: 100% !important; position: static; } .card-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- end custom head snippets -->
-
-  
-
-  <body><div id="MathJax_Message" style="display: none;"></div>
-
-    <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
-<![endif]-->
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-
-      <nav id="site-nav" class="greedy-nav">
-
-        <button type="button">
-          <div class="navicon"></div>
-        </button>
-
-        <ul class="visible-links">
-
-          <li class="masthead__menu-item masthead__menu-home-item">
-            <a href="#home">ホーム</a>
-          </li>
-
-          <li class="masthead__menu-item">
-            <a href="#about-me">自己紹介</a>
-          </li>
-
-          <li class="masthead__menu-item">
-            <a href="#paper">生い立ち</a>
-          </li>
-
-          <li class="masthead__menu-item">
-            <a href="#hobby">趣味</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-    </div>
-  </div>
-</div>
-
-    <div id="main" role="main">
-      
-  <div class="sidebar sticky">
-  
-
-<div itemscope="" itemtype="http://schema.org/Person" class="profile_box">
-
-  <div class="author__content">
-    <h3 class="author__name">西山　雄貴<br>Nishiyama Yuki</h3>
-    <p class="author__bio">広島大学<br>情報科学部<br>学部生</p>
-  </div>
-
-  <div class="author__urls-wrapper">
-    <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
-    <ul class="author__urls social-icons" style="">
-      
-        <li><div style="white-space: normal; margin-bottom: 1em;">2008年広島生まれ<br>情報科学部を専攻</div></li>
-      
-      
-        <li>📍広島県 東広島市</li>
-      
-      
-      
-      
-        <li><a href="mailto:b261238@hiroshima-u.ac.jp">  ✉ b261238@hiroshima-u.ac.jp</a></li>
-      
-      
-    </ul>
-      <div class="author__urls_sm">
-      
-      
-        <a href="mailto:kure@hiroshima-u.ac.jp"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
-
-        <a href="https://scholar.google.com/citations?user=08FSBG4AAAAJ"><i class="fas fa-fw fa-graduation-cap"></i></a>
-      
-      
-      
-        <a href="https://orcid.org/0000-0001-8652-3002"><i class="ai ai-orcid-square ai-fw"></i></a>
-      
-      
-      
-    </div>
-  </div>
-</div>
-
-  
-  </div>
-
-    
-      <article class="page" itemscope="" itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="headline" content="">
-        <div class="page__inner-wrap">
-          <section class="page__content" itemprop="text">
-
-<p><span class="anchor" id="about-me"></span>
-<h2 id="about-me">自己紹介</h2>
-　令和8年度入学の学部生として情報科学部を専攻しています。<br>
-　名前は西山　雄貴「ニシヤマ　ユウキ」と申します。<br>
-　絵を描いたり、ものを作ったりすることが好きです。小学生の頃、よく描いていました。<br>
-　最近絵描きを再開しました。<br>
-<br>
-　〇所属サークル・・・ゲーム制作同好会/アクリル水彩画サークル<br>
-　〇好きなゲーム・・・ゼルダの伝説/原神/UNDERTALE<br>
-
-
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>経歴</title>
-
-<style>
-body {
-  font-family: sans-serif;
-  color: black;
-}
-
-/* 見出し */
-#paper {
-  margin-bottom: 30px;
-}
-
-/* 全体 */
-.timeline {
-  position: relative;
-  margin-left: 40px;
-}
-
-/* 縦の青い線 */
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: blue;
-}
-
-/* 各項目 */
-.item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-/* 青い丸 */
-.circle {
-  width: 20px;
-  height: 20px;
-  border: 3px solid blue;
-  border-radius: 50%;
-  background: white;
-  z-index: 1;
-}
-
-/* 文字（黒） */
-.text {
-  margin-left: 15px;
-  color: black;
-}
-
-</style>
-
-</head>
 <body>
-
-<h2 id="paper">生い立ち</h2>
-
-<div class="timeline">
-
-  <div class="item">
-    <div class="circle"></div>
-    <div class="text">2008年3月31日：誕生</div>
+  <div class="masthead">
+    <nav class="greedy-nav">
+      <ul class="visible-links">
+        <li><a href="#about-me">自己紹介</a></li>
+        <li><a href="#timeline">生い立ち</a></li>
+        <li><a href="#hobby">趣味</a></li>
+        <li><a href="#original-game">オリジナルゲーム</a></li>
+      </ul>
+    </nav>
   </div>
 
-  <div class="item">
-    <div class="circle"></div>
-    <div class="text">2014年：阿品台西小学校入学</div>
+  <div class="hero-wrapper" id="home">
+    <div class="hero-container">
+      <img src="index_files/スクリーンショット 2026-05-26 214553.png" alt="広島大学" class="hero-image">
+      <div class="hero-caption-right">※この画像は<a href="https://www.hiroshima-u.ac.jp/" target="_blank">広島大学のホームページ</a>からお借りしています。</div>
+    </div>
   </div>
 
-  <div class="item">
-    <div class="circle"></div>
-    <div class="text">2020年：阿品台中学校入学</div>
+  <div id="main" role="main">
+    <aside class="sidebar__main">
+      <h3 class="author__name">西山 雄貴</h3>
+      <div class="author__name-en">NISHIYAMA YUKI</div>
+      <p class="author__bio">広島大学<br>情報科学部<br>学部生</p>
+      <ul class="author__urls">
+        <li><i class="fas fa-seedling"></i> 2008年生まれ<br>情報科学部を専攻</li>
+        <li><i class="fas fa-map-marker-alt"></i> 広島県</li>
+      </ul>
+    </aside>
+
+    <article class="page">
+      <section id="about-me">
+        <h2>自己紹介</h2>
+        <p>
+          令和8年度入学の学部生として情報科学部を専攻しています。<br>
+          名前は西山 雄貴「ニシヤマ ユウキ」と申します。<br>
+          絵を描いたり、ものを作ったりすることが好きです。小学生の頃、よく描いていました。<br>
+          最近絵描きを再開しました。
+        </p>
+        <h3 class="section-subheading">所属サークル</h3>
+        <div class="card-grid">
+          <div class="zelda-card">
+            <h4>ゲーム制作同好会</h4>
+            <div class="img-wrapper"><img src="index_files/20260525_040811059_iOS.jpg" alt="ゲーム制作"></div>
+          </div>
+          <div class="zelda-card">
+            <h4>アクリル水彩画サークル</h4>
+            <div class="img-wrapper"><img src="index_files/20260525_040755522_iOS.jpg" alt="アクリル水彩画"></div>
+          </div>
+        </div>
+
+        <h3 class="section-subheading">好きなゲーム</h3>
+        <p class="disclaimer-text">※各カードをクリックすると公式サイトへ移動します。掲載している画像の著作権は各権利所有者に帰属します。</p>
+        <div class="card-grid">
+          <a href="https://www.nintendo.co.jp/zelda/botw/" target="_blank" rel="noopener noreferrer" class="zelda-card botw-card">
+            <h4>ゼルダの伝説<br>ブレス オブ ザ ワイルド</h4>
+            <div class="img-wrapper"><img src="index_files/20260525_040636246_iOS.jpg" alt="ゼルダの伝説"></div>
+            <div class="copyright">© Nintendo</div>
+          </a>
+          <a href="https://genshin.hoyoverse.com/ja" target="_blank" rel="noopener noreferrer" class="zelda-card">
+            <h4>原神</h4>
+            <div class="img-wrapper"><img src="index_files/20260525_040649320_iOS.jpg" alt="原神"></div>
+            <div class="copyright">© COGNOSPHERE</div>
+          </a>
+          <a href="https://undertale.jp/" target="_blank" rel="noopener noreferrer" class="zelda-card">
+            <h4>UNDERTALE</h4>
+            <div class="img-wrapper"><img src="index_files/20260525_040700933_iOS.jpg" alt="UNDERTALE" style="object-fit: cover;"></div>
+            <div class="copyright">© Toby Fox / Fangamer</div>
+          </a>
+        </div>
+      </section>
+
+      <section id="timeline">
+        <div class="zelda-line"><div class="diamond"></div></div>
+        <h2>生い立ち</h2>
+        <div class="timeline">
+          <div class="item"><div class="circle"></div><div class="text">2008年3月31日<br><span style="font-size:0.9rem; color:#888;">誕生</span></div></div>
+          <div class="item"><div class="circle"></div><div class="text">2014年<br><span style="font-size:0.9rem; color:#888;">阿品台西小学校 入学</span></div></div>
+          <div class="item"><div class="circle"></div><div class="text">2020年<br><span style="font-size:0.9rem; color:#888;">阿品台中学校 入学</span></div></div>
+          <div class="item"><div class="circle"></div><div class="text">2023年<br><span style="font-size:0.9rem; color:#888;">廿日市高校 入学</span></div></div>
+          <div class="item"><div class="circle"></div><div class="text">2026年<br><span style="font-size:0.9rem; color:#888;">広島大学 入学</span></div></div>
+        </div>
+      </section>
+
+      <section id="hobby">
+        <div class="zelda-line"><div class="diamond"></div></div>
+        <h2>趣味</h2>
+        <p>最近の趣味は絵を描くこととゲームをつくることです。</p>
+        <p>絵描きでは人物を描く練習をしています。手や足の細部の練習や全体像の練習、男女の描き分けなどを練習しています。ドローイングという方法を用いて練習しています。</p>
+        <div class="slider-container">
+          <div class="slider-track" id="slider-draw">
+            <img src="index_files/20260526_121024000_iOS 1.png" alt="絵1">
+            <img src="index_files/20260526_121024000_iOS.png" alt="絵2">
+          </div>
+        </div>
+      </section>
+
+      <section id="original-game">
+        <div class="zelda-line"><div class="diamond"></div></div>
+        <h2>オリジナルゲーム</h2>
+        <p>ゲーム作りでは主にプログラミングと3Dモデルの作成をしています。プログラミングは現在履修しているプログラミング１と同じC言語を使用しています。<br>3Dモデルでは主に建物や装飾品の作成をしています。最近、キャラクターの作成もしています。小さいころから好きだった、ものづくりにも似ているため、3Dモデルの作成は最近特にはまっています。</p>
+        <p>ゲーム制作同好会で開発しているオリジナルゲームの開発中スクリーンショットです。</p>
+        <div class="slider-container" style="border-color: var(--sheikah-blue); box-shadow: 0 0 15px rgba(66, 245, 245, 0.2);">
+          <div class="slider-track" id="slider-org-game">
+            <img src="index_files/20260526_113656000_iOS.png" alt="オリジナルゲーム画面1">
+            <img src="index_files/20260526_114443000_iOS.png" alt="オリジナルゲーム画面2">
+            <img src="index_files/20260526_114516000_iOS.png" alt="オリジナルゲーム画面3">
+          </div>
+        </div>
+      </section>
+      <div class="zelda-line"><div class="diamond"></div></div>
+    </article>
   </div>
-
-  <div class="item">
-    <div class="circle"></div>
-    <div class="text">2023年：廿日市高校入学</div>
-  </div>
-
-  <div class="item">
-    <div class="circle"></div>
-    <div class="text">2026年：広島大学入学</div>
-  </div>
-
-</div>
-
+  <footer class="ai-credit">※このサイトの作成にはAIを使用しています。</footer>
+  <script>
+    function setupAutoSlider(trackId, intervalMs) { const track = document.getElementById(trackId); if (!track) return; const images = track.querySelectorAll('img'); if (images.length <= 1) return; let currentIndex = 0; setInterval(() => { currentIndex++; if (currentIndex >= images.length) { currentIndex = 0; } track.style.transform = `translateX(-${currentIndex * 100}%)`; }, intervalMs); }
+    document.addEventListener('DOMContentLoaded', () => { setupAutoSlider('slider-draw', 3500); setupAutoSlider('slider-org-game', 4000); });
+  </script>
 </body>
 </html>
-
-<h2 id="hobby">趣味</h2>
-    <p>
-　最近の趣味は絵を描くこととゲームをつくることです。<br>
-　絵描きでは人物を描く練習をしています。手や足の細部の練習や全体像の練習、<br>
-　男女の描き分けなどを　練習しています。ドローイングという方法を用いて練習しています。<br>
-<br>
-　ゲーム作りでは主にプログラミングと3Dモデルの作成をしています。<br>
-　プログラミングは現在履修しているプログラミング１と同じC言語を使用しています。<br>
-　3Dモデルでは主に建物や装飾品の作成をしています。最近、キャラクターの作成もしています。<br>
-　小さいころから好きだった、ものづくりにも似ているため3Dモデルの作成は最近特にはまってます。<br>
-
-</p>
-
-    
-  
-</template></div></body></html>
